@@ -3,7 +3,7 @@
 # SkyCast
 
 SkyCast is a weather application developed using Flutter, a versatile UI toolkit powered by the OpenWeather API to provide real-time weather information. This app aims to deliver a seamless, user-friendly experience for accessing weather forecasts on mobile devices.
-                                                  ![image](https://github.com/prateeksingh24/SkyCast/assets/127473792/2f782b34-27f2-4a53-9953-593eb221cd23)
+                                               
 
 
 ## Getting Started
