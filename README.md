@@ -58,24 +58,4 @@ Contributions are welcome! If you would like to enhance or fix issues in the app
 4. Push to the branch: `git push origin feature-name`.
 5. Submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Flutter community for the amazing toolkit.
-- OpenWeather for providing a reliable weather API.
-
-For additional guidance on Flutter development, refer to the [online documentation](https://docs.flutter.dev/), which includes tutorials, samples, and a comprehensive API reference.
-```
-
-3. Save the changes to your README.md file.
-
-4. Commit and push the changes to your GitHub repository:
-
-   ```bash
-   git add README.md
-   git commit -m "Add SkyCast README"
-   git push origin master
-   ```
