@@ -17,12 +17,13 @@ class worker {
   String? description;
   String? main;
   String? icon;
+  String apiKey="";
 
 
   //method
   Future <void> getData() async{
     try{
-      http.Response response = await http.get(Uri.parse("https://api.openweathermap.org/data/2.5/weather?q=$location&appid=8da50399e7aded95a34f2c4944d6e80e"));
+      http.Response response = await http.get(Uri.parse("https://api.openweathermap.org/data/2.5/weather?q=$location&appid=$apiKey"));
       Map data = jsonDecode(response.body);
 
       //Getting Temp,Humidity
