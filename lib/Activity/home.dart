@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
                         },
                         child: Container(
                             margin: const EdgeInsets.fromLTRB(3, 0, 7, 0),
-                            child: Icon(
+                            child: const Icon(
                               Icons.search,
                               color: Colors.blue,
                             )),
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
                                   });
                             }
                           },
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                               border: InputBorder.none, hintText: "Search Your City....... "),
                         ),
                       ),
@@ -137,14 +137,14 @@ class _HomeState extends State<Home> {
                         child:  Row(
                           children: [
                             Image.network('https://openweathermap.org/img/wn/$iconCode@2x.png'),
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                             Column(
                               children: [
                                 Text(
                                   "$desc",
-                                  style: TextStyle(
+                                  style:  const TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                                 ),
                                 Text(
                                   "In $getCity",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
@@ -181,14 +181,27 @@ class _HomeState extends State<Home> {
                         child:  Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(WeatherIcons.thermometer),
+                            const Row(
+                              children: [
+                                 Icon(WeatherIcons.thermometer,),
+                                SizedBox(
+                                  width:10 ,
+                                ),
+                                Text("Temprature",style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700,
+                                ),)
+                              ],
+                            ),
+
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("$temp",style: TextStyle(
+                                Text("$temp",style: const  TextStyle(
                                   fontSize: 80,
                                 ),),
-                                Text("C",style: TextStyle(
+                                const Text("C",style: TextStyle(
                                   fontSize: 30,
                                 ),),
                               ],
@@ -213,20 +226,34 @@ class _HomeState extends State<Home> {
                         margin: const EdgeInsets.fromLTRB(20, 0, 10, 0),
                         child:  Column(
                           children: [
-                            Row(
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Icon(WeatherIcons.day_windy),
+                                Row(
+                                  children: [
+                                    Icon(WeatherIcons.day_windy),
+                                    SizedBox(
+                                      width:15 ,
+                                    ),
+                                    Text("Air Speed",style: TextStyle(
+
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15,
+                                    ),)
+                                  ],
+                                ),
+
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
-                            Text("$air",style: TextStyle(
+                            Text("$air",style: const TextStyle(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
                             ),),
-                            Text("km/hr"),
+                            const Text("km/hr"),
                           ],
                         ),
                       ),
@@ -238,36 +265,50 @@ class _HomeState extends State<Home> {
                           color: Colors.white.withOpacity(0.5),
                           borderRadius: BorderRadius.circular(14),
                         ),
-                        padding: EdgeInsets.all(26),
-                        margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
+                        padding:const  EdgeInsets.all(26),
+                        margin: const EdgeInsets.fromLTRB(10, 0, 20, 0),
                         child:  Column(
                           children: [
-                            Row(
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Icon(WeatherIcons.humidity),
+                                Row(
+                                  children: [
+                                    Icon(WeatherIcons.humidity,size: 24,),
+                                    SizedBox(
+                                      width:7 ,
+                                    ),
+                                    Text("Humidity",style: TextStyle(
+
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15
+                                    ),)
+                                  ],
+                                ),
+
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
-                            Text("$hum",style: TextStyle(
+                            Text("$hum",style: const TextStyle(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
                             ),),
-                            Text("Percent"),
+                            const Text("Percent"),
                           ],
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Container(
-                  padding: EdgeInsets.all(10),
-                  child: Column(
+                  padding: const EdgeInsets.all(10),
+                  child:const  Column(
                     children: [
                       Text("Made By Prateek"),
                       Text("Data Provided By OpenWeathermap.org")
